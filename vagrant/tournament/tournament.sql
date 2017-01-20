@@ -6,10 +6,10 @@
 -- You can write comments in this file by starting them with two dashes, like
 -- these lines here.
 
-DROP DATABASE "tournament";
+DROP DATABASE tournament;
 DROP TABLE "Players";
 DROP TABLE "Matches";
-CREATE DATABASE "tournament";
+CREATE DATABASE tournament OWNER vagrant;
 
 --CREATE TABLE (with auto numbering integer id)
 

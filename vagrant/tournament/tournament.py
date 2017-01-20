@@ -8,15 +8,15 @@ import psycopg2
 
 def connect():
     """Connect to the PostgreSQL database.  Returns a database connection."""
-    return psycopg2.connect("dbname=tournament")
+    return psycopg2.connect("dbname=tournament user=vagrant")
 
 
 def deleteMatches():
     """Remove all the match records from the database."""
     conn = connect()
     cursor = conn.cursor()
-    cursor.execute('DELETE FROM "tournament"."Matches"')
-    # cursor.execute('DELETE FROM "Matches"')
+    # cursor.execute('DELETE FROM "tournament"."Matches"')
+    cursor.execute('DELETE FROM "Matches"')
     conn.commit()
     conn.close()
 
