@@ -9,7 +9,9 @@
 DROP DATABASE tournament;
 DROP TABLE "Players";
 DROP TABLE "Matches";
-CREATE DATABASE tournament OWNER vagrant;
+CREATE DATABASE tournament;
+
+CONNECT TO tournament USER vagrant USING password123;
 
 --CREATE TABLE (with auto numbering integer id)
 
