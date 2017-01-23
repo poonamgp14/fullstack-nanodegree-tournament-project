@@ -120,6 +120,7 @@ def testPairings():
     standings = playerStandings()
     [id1, id2, id3, id4, id5, id6, id7, id8] = [row[0] for row in standings]
     pairings = swissPairings()
+    # print(pairings)
     if len(pairings) != 4:
         raise ValueError(
             "For eight players, swissPairings should return 4 pairs. Got {pairs}".format(pairs=len(pairings)))
@@ -149,7 +150,7 @@ def testPairings():
 
 if __name__ == '__main__':
     testCount()
-    # testStandingsBeforeMatches()
-    # testReportMatches()
-    # testPairings()
+    testStandingsBeforeMatches()
+    testReportMatches()
+    testPairings()
     print "Success!  All tests pass!"
